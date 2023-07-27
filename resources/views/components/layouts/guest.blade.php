@@ -15,10 +15,11 @@
     <x-toggle-theme.toggle-theme />
   </div>
 
-  <main class="container mx-auto">
+  <main class="container mx-auto min-h-screen">
         {{ $slot }}
   </main>
 
+  <x-footer.footer />
 </body>
 
 </html>

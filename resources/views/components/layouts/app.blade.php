@@ -14,9 +14,11 @@
     <x-toggle-theme.toggle-theme />
   </div>  --}}
   <x-navbar.navbar />  
-  <main class="container mx-auto">
+  <main class="container mx-auto min-h-screen">
     {{ $slot }}
   </main>
+
+  <x-footer.footer />
 </body>
 
 </html>
