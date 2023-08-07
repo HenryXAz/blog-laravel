@@ -21,4 +21,4 @@ Route::get('/test', function() {
   return view('test');
 });
 
-Route::view('/dashboard', 'dashboard/index')->name('dashboard.index');
+Route::view('/dashboard', 'dashboard/index')->name('dashboard.index')->middleware('auth');

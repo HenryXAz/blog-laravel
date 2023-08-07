@@ -9,10 +9,17 @@
   @vite(['resources/css/app.css', 'resources/js/app.js']) 
 </head>
 
-<body class="bg-white dark:bg-slate-900 text-gray-800 dark:text-gray-200">
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
 
-  <div class="flex justify-end max-w-6xl my-5">
+  <div class="flex justify-end gap-2 max-w-6xl my-5"> 
     <x-toggle-theme.toggle-theme />
+    
+    @if (Auth::user())
+       <a class="p-2 border rounded-md transition-all duration-300 border-blue-700 hover:bg-blue-600 hover:text-gray-200"   href="{{ route('dashboard.index')}}">Dashboard</a> 
+    
+    @else
+      <a class="p-2 border rounded-md transition-all duration-300 border-blue-700 hover:bg-blue-600 hover:text-gray-200"   href="{{route('auth.login.view')}}">Login</a> 
+    @endif 
   </div>
 
   <main class="container mx-auto min-h-screen">

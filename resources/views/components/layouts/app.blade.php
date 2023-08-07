@@ -9,10 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-white dark:bg-slate-900 text-gray-800 dark:text-gray-200">
-  {{-- <div class="flex justify-end max-w-6xl my-5">
-    <x-toggle-theme.toggle-theme />
-  </div>  --}}
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
   <x-navbar.navbar />  
   <main class="container mx-auto min-h-screen">
     {{ $slot }}

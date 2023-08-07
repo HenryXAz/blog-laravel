@@ -3,6 +3,12 @@
 
 <div class="max-w-3xl mx-auto" >
 
+@error('login_failed')
+  <p class="my-5 text-red-500 text-center">
+    {{ $message }}   
+  </p> 
+@enderror
+
 <form method="POST" action="{{ route('auth.login.post')}}">
   @csrf 
   
