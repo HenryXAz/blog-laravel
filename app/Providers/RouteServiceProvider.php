@@ -49,5 +49,9 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
           ->prefix('profile/')
           ->group(base_path('routes/profile.php'));
+        
+        Route::middleware("web")
+          ->prefix("categories/")
+          ->group(base_path("routes/category.php"));
     }
 }
