@@ -30,7 +30,11 @@
 
     @include('categories.category-form')
 
+    @if(count($categories) > 0)
+      @include('categories.categories-table')
 
-    @include('categories.categories-table')
+    @else 
+      <h3 class="text-2xl text-center font-light">No hay categorías</h3>
+    @endif
 
 </x-layouts.app>

@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string("title");
             $table->text("content");
             $table->string("img_path");
+            $table->foreignId("user_id")
+              ->constrained("users")
+              ->cascadeOnUpdate()
+              ->cascadeOnDelete();
             $table->foreignId("category_id")
               ->constrained("categories")
               ->cascadeOnUpdate()

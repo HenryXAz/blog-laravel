@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get("/", [HomePageController::class, "index"])->name('home');
+Route::get("/post/{post}", [HomePageController::class, "show"])->name("home.post.show");
 
-Route::get('/test', function() {
-  return view('test');
-});
 
 Route::view('/dashboard', 'dashboard/index')->name('dashboard.index')->middleware('auth');
