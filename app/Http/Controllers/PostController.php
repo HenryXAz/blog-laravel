@@ -12,8 +12,9 @@ class PostController extends Controller
 {
   public function index()
   {
+    $userId = Auth::user()->id;
     $categories = Category::all();
-    $posts = Post::with("category")->get(["id", "title", "category_id"]);
+    $posts = Post::where("user_id",$userId)->with("category")->get(["id", "title", "category_id"]);
 
 
     return view("posts.index", compact("categories", "posts"));

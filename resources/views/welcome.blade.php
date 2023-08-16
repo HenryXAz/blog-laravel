@@ -1,7 +1,7 @@
 <x-layouts.guest>
-<div class="max-w-2xl mx-auto flex flex-col items-center gap-5">
+<div class="max-w-5xl mx-auto flex flex-col items-center gap-5">
   @foreach($posts as $post)
-    <div class="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-4xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="{{route("home.post.show", $post->id)}}">
             <img class="rounded-t-lg" src="{{ asset($post->img_path) }}" alt="{{$post->title}}" />
         </a>
@@ -36,5 +36,7 @@
         </div>
     </div>
   @endforeach
+
+  {{ $posts->links()  }}
 </div>
 </x-layouts.guest>

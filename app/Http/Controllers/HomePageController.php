@@ -10,7 +10,7 @@ class HomePageController extends Controller
 {
   public function index()
   {
-    $posts = Post::with("category")->get();
+    $posts = Post::with("category")->paginate(5);
 
     return view("welcome", compact("posts"));
   }

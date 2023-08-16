@@ -30,6 +30,12 @@
 
     @include('posts.post-form')
 
+    @if(count($posts) > 0)
+
     @include('posts.posts-table')
+
+    @else 
+      <p class="text-center">No hay posts</p>
+    @endif
 
 </x-layouts.app>

@@ -15,7 +15,7 @@
         </div>
 
         <div
-            class="block w-full sm:w-1/2 md:w-1/3 p-6 text-gray-200 border border-gray-200 rounded-lg shadow bg-red-700 dark:border-gray-700">
+            class="block w-full sm:w-1/2 md:w-1/3 p-6 text-gray-200 border border-gray-200 rounded-lg shadow bg-green-700 dark:border-gray-700">
             <h5 class="mb-2 text-2xl font-bold tracking-tighttext-gray-200">Authors</h5>
 
             <div class="flex flex-col gap-2 items-center">
@@ -49,7 +49,7 @@
                 <h5 class="mb-2 text-2xl font-light tracking-tighttext-gray-200">Posts By Category</h5>
                 @foreach ($posts_by_category as $post)
                     <div class="flex justify-between overflow-x-auto w-full text-gray-200 mb-3 gap-2">
-                        <p class="rounded-md w-96 p-2 bg-cyan-700"> {{ $post->category->description }} </p>
+                        <p class="rounded-md w-96 p-2 bg-amber-700"> {{ $post->category->description }} </p>
                         <p class="p-2 rounded-md w-96 bg-zinc-950">{{ $post->total }} posts in total</p>
                     </div>
                 @endforeach
