@@ -57,5 +57,9 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware("web")
           ->prefix("posts/")
           ->group(base_path("routes/posts.php"));
+
+        Route::middleware("web")
+          ->prefix("dashboard/")
+          ->group(base_path("routes/dashboard.php")); 
     }
 }

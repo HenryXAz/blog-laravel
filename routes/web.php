@@ -16,6 +16,3 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", [HomePageController::class, "index"])->name('home');
 Route::get("/post/{post}", [HomePageController::class, "show"])->name("home.post.show");
-
-
-Route::view('/dashboard', 'dashboard/index')->name('dashboard.index')->middleware('auth');
